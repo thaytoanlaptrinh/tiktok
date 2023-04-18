@@ -1,14 +1,12 @@
-
-import './App.css'
-
+import './App.css';
+import Index from '~/component/button';
 function App() {
-
-
-  return (
-    <>
-      <h1>Hello</h1>
-    </>
-  )
+    return (
+        <>
+            <Index />
+            <h1>Hello</h1>
+        </>
+    );
 }
 
 export default App;
