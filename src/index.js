@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom';
+import GlobalStyles from './component/GlobalStyles';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <React.StrictMode>
+    // <React.StrictMode>
     <Router>
-      <App />
-    </Router>
-  // </React.StrictMode>
+        <GlobalStyles>
+            <App />
+        </GlobalStyles>
+    </Router>,
+    // </React.StrictMode>
 );
 
 reportWebVitals();
