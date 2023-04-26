@@ -1,14 +1,21 @@
 import './App.css';
-import Folowing from '~/pages/Folowing';
-import Home from '~/pages/Home';
+import { publicRoutes } from '~/routes';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
     return (
         <div className="App">
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/flowing" element={<Folowing />} />
+                {publicRoutes.map((route, index) => {
+                    const Page = route.component;
+                    return (
+                        <Route
+                            key={index}
+                            path={route.path}
+                            element={<Page />}
+                        />
+                    );
+                })}
             </Routes>
         </div>
     );
